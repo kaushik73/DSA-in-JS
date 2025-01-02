@@ -10,6 +10,8 @@ Then we find the smallest among remaining elements (or second smallest) and move
 position by swapping.
 
 Then we keep doing this until we get all elements moved to correct position.
+
+--> choto ko phele dalte jao aur suru mai i ko sabse chota manno 
 */
 function selectionSort(arr) {
   const len = arr.length;

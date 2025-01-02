@@ -13,6 +13,8 @@ After k passes, the largest k elements must have been moved to the last k positi
 In a pass, we consider remaining elements and compare all adjacent and swap if larger element is 
 before a smaller element. If we keep doing this, we get the largest (among the remaining elements) 
 at its correct position.
+
+--> doo pass valo ko swap karte jao, 1st iteration k baad max element hoga sabse last m.
 */
 
 function bubbleSort(arr) {

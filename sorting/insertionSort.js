@@ -10,7 +10,10 @@ Compare second element with the first element and check if the second element is
 Move to the third element and compare it with the first two elements and put at its correct position
 Repeat until the entire array is sorted.
 
+--> unsorted array m se element leke usko sahi jagah daalo
 */
+
+// // TODO : Learn and do it;
 
 function insertionSort(arr) {
   const len = arr.length;
@@ -27,8 +30,6 @@ function insertionSort(arr) {
         swapped = true;
       }
     }
-    // IF no two elements were swapped by inner loop, then break
-    if (swapped == false) break;
   }
 }
 

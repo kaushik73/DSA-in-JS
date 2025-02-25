@@ -14,36 +14,26 @@ deleteCount: The number of elements to remove (optional).
 item1, item2, ...: The elements to add to the array, starting at the start index (optional).
 */
 
-/*
 const cloneArray = (arr) => arr.slice();
 
-const replaceElements = (arr, start, count, ...newElements) =>
-  arr.splice(start, count, ...newElements);
-
-const splitArray = (arr, pos) => {
-  let fp = arr.slice(0, pos);
-  let sp = arr.slice(pos);
-
-  return [fp, sp];
-};
 let str = "Hello, world!";
 let arr = [1, 2, 3, 4, 5, 6, 7];
 let arr1 = [1, 2, 3, 4, 5, 6];
 
 // Extract the first three elements using slice.
-// console.log(arr.slice(0,3));
+console.log(arr.slice(0, 3));
 
 // Extract elements from the 4th position to the end using slice.
-// console.log(arr.slice(3));
+console.log(arr.slice(3));
 
 // Extract the last two elements using slice.
-// console.log(arr.slice(-2));
+console.log(arr.slice(-2));
 
 // make clone of arr :
-// console.log(cloneArray(arr));
-// extract world from string :
+console.log(cloneArray(arr));
 
-// console.log(str.slice(-6,-1));
+// extract world from string :
+console.log(str.slice(-6, -1));
 
 // make a reverse copy of an array without modifying the original array.
 const reverseArray = (arr) => {
@@ -61,7 +51,7 @@ let [evenNumbers, oddNumbers] = separateEvenOdd(arr);
 console.log(evenNumbers); // Output: [2, 4, 6]
 console.log(oddNumbers); // Output: [1, 3, 5, 7]
 
-// Splice
+arr1 = [1, 2, 3, 4, 5, 6];
 //  Remove the 3rd and 4th elements.
 arr1.splice(2, 2);
 console.log(arr1);
@@ -70,13 +60,23 @@ console.log(arr1);
 arr1.splice(2, 0, 10, 20);
 console.log(arr1);
 
+const replaceElements = (arr, start, count, ...newElements) =>
+  arr.splice(start, count, ...newElements);
+
 let arr2 = [1, 2, 3, 4, 5];
 replaceElements(arr2, 1, 2, 10, 20);
 console.log(arr2);
 
+const splitArray = (arr, pos) => {
+  let fp = arr.slice(0, pos);
+  let sp = arr.slice(pos);
+
+  return [fp, sp];
+};
+
 let arr3 = [1, 2, 3, 4, 5];
-let result = splitArray(arr3, 3);
-console.log(result);
+let [fp, sp] = splitArray(arr3, 3);
+console.log([fp, sp]);
 
 const takeEverySecond = (arr) => {
   for (let i in arr) {
@@ -87,7 +87,6 @@ const takeEverySecond = (arr) => {
 
 let arr4 = [1, 2, 3, 4, 5, 6];
 console.log(takeEverySecond(arr4)); // Output: [2, 4, 6]
-*/
 
 let arr5 = [1, 2, 3];
 arr5.splice(3, 0, 4, 5, 6);

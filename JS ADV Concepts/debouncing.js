@@ -1,5 +1,5 @@
 /*
-Debouncing:
+Debouncing: Funx is invoked after a certain period of inactivity.
 Purpose:
 Delays the execution of a function until a certain amount of time has passed since the last event trigger.
 How it works:

@@ -1,5 +1,5 @@
 /*
-Throttling:
+Throttling: Funx is repeatedly invoked after a given interval
 Purpose: Limits the rate at which a function is executed.
 How it works: The function is executed at regular intervals, regardless of how frequently the event is triggered.
 Use cases:

@@ -34,7 +34,7 @@ let b = Array.from(map2.values()); // [1, 2]
 const fruits = ["apple", "banana", "orange"];
 const str1 = fruits.toString(); // "apple,banana,orange"
 
-// --------------------------------------------x
+// --------------------------------------------
 let arr1 = Array.of(1, 2, 3, 4, 5);
 console.log(arr1); // [1, 2, 3, 4, 5]
 

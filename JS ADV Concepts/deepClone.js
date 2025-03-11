@@ -27,7 +27,7 @@ Shallow VS Deep Copy :
 1. The above method is shallow copy. It copies only top-level fields.
 2. To copy nested objects, deep copy comes into picture.
 
-==>JSON.parse(JSON.stringyfy(obj));
+==>JSON.parse(JSON.stringify(obj));
 
 1. But the above doesn’t copy functions and dates. So, loadash is used.
 

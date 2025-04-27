@@ -21,3 +21,17 @@ console.log(add(5, 10)); // Output: Calculating result, 15
 console.log(add(5, 10)); // Output: Fetching from cache, 15
 console.log(add(3, 7)); // Output: Calculating result, 10
 console.log(add(3, 7)); // Output: Fetching from cache, 10
+
+// ye mene banaya bina dekhe on 27/4/25 :
+function memorizeData(ip) {
+  let cache = {};
+
+  function getData(ip) {
+    if (cache[ip]) {
+      return cache[ip];
+    } else {
+      res = ip * 222222;
+      cache[ip] = res;
+    }
+  }
+}

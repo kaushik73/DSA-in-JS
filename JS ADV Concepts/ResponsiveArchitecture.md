@@ -19,9 +19,7 @@ Architecting a responsive web application involves several key methods and best 
 ### 5. **Viewport Meta Tag**
 
 - Include the viewport meta tag in your HTML to control the layout on mobile browsers. This tag ensures that your web page is rendered correctly on different devices:
-  ```html
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  ```
 
 ### 6. **Flexbox and Grid Layouts**
 

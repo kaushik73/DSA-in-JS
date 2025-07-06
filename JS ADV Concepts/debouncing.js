@@ -17,6 +17,17 @@ function debounce(func, delay) {
   };
 }
 
+function debouncePreserveThis(fn, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      res = fn.apply(this, args);
+      3;
+    }, delay);
+  };
+}
+
 function debouncePromise(func, delay) {
   let timer;
   return (...args) =>

@@ -17,18 +17,20 @@ at its correct position.
 --> doo pass valo ko swap karte jao, 1st iteration k baad max element hoga sabse last m.
 */
 
+// len-i-1 because after each pass, the largest element is already in its correct position, so we don't need to check it again
+// Eg - after 0 index (first) pass, the largest element is at last index
+// after 1 index (second) pass, the second largest element is at second last
+
 function bubbleSort(arr) {
   const len = arr.length;
   let swapped;
 
-  for (let i = 0; i < len - 1; i++) {
+  for (let i = 0; i < len; i++) {
     swapped = false;
 
     for (let j = 0; j < len - i - 1; j++) {
       if (arr[j] > arr[j + 1]) {
-        let temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
         swapped = true;
       }
     }

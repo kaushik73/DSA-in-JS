@@ -12,7 +12,7 @@ function throttle(func, delay) {
 
   return function (...args) {
     const now = Date.now();
-    console.log(now, lastCall, now - lastCall, delay);
+    // console.log(now, lastCall, now - lastCall, delay);
     if (now - lastCall >= delay) {
       lastCall = now;
       func(...args);

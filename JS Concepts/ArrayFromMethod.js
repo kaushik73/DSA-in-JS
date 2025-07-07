@@ -23,7 +23,12 @@ const doubled = Array.from(numbers1, (x) => x * 2); // [2, 4, 6]
 let set = new Set([1, 2, 3]);
 let arrayFromSet = Array.from(set); // [1, 2, 3]
 
-let map = new Map({ a: 1, b: 2, c: 3 });
+//In JavaScript, the Map constructor expects an array of key-value pairs, not an object.
+let map = new Map([
+  ["a", 1],
+  ["b", 2],
+  ["c", 3],
+]);
 let map2 = new Map().set("GFG", 1).set("Geeks", 2);
 
 let arrayFromMap = Array.from(map); // [['a', 1], ['b', 2], ['c', 3]]
@@ -34,9 +39,9 @@ let b = Array.from(map2.values()); // [1, 2]
 const fruits = ["apple", "banana", "orange"];
 const str1 = fruits.toString(); // "apple,banana,orange"
 
-// --------------------------------------------
-let arr1 = Array.of(1, 2, 3, 4, 5);
-console.log(arr1); // [1, 2, 3, 4, 5]
+// --------------Convert numbers to array------------------------------
+let arr1 = Array.of(11, 21, 31, 41, 51);
+console.log(arr1);
 
 let arr2 = Array.of(10);
 console.log(arr2); // [10]

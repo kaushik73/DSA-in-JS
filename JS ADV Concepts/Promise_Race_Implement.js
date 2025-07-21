@@ -21,4 +21,6 @@ const p3 = new Promise((_, reject) =>
 );
 promiseRace([p1, p2, p3])
   .then((result) => console.log(result))
-  .catch((error) => console.error(error)); // Output: "Promise 2 resolved" (or "Promise 1 resolved" if it resolves first)
+  .catch((error) => console.error(error));
+
+// Output: "Promise 2 resolved" (or "Promise 1 resolved" if it resolves first)

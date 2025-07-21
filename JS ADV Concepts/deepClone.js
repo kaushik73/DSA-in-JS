@@ -14,6 +14,16 @@ function deepclone(obj) {
   return copy;
 }
 
+let obj = {
+  a: 1,
+  b: { c: { d: 3 } },
+};
+
+let obj2 = deepclone(obj);
+obj2.b.c.d = 14;
+console.log(obj2); // { a: 1, b: { c: { d: 14 } } }
+console.log(obj); // { a: 1, b: { c: { d: 3 } } }
+
 /*
 Shallow VS Deep Copy :
 

@@ -1,3 +1,23 @@
+function flattenObject(obj) {
+  let ans = {};
+  let parentKey = "";
+  return flatten(obj, ans, parentKey);
+}
+
+const flatten = (obj, ans, parentKey) => {
+  for (let key in obj) {
+    let fullKey = parentKey ? `${parentKey}.${key}` : key;
+    let value = obj[key];
+    if (typeof value === "object" && value !== null && !Array.isArray(value)) {
+      // Only recurse if it's a non-null object and not an array
+      flatten(value, ans, fullKey);
+    } else {
+      ans[fullKey] = value;
+    }
+  }
+  return ans;
+};
+
 const object = {
   a: 5,
   b: 6,
@@ -8,24 +28,27 @@ const object = {
       n: 3,
     },
   },
-};
+}; // Output Needed : { a: 5, b: 6, 'c.f': 9, 'c.g.m': 17, 'c.g.n': 3 }
 
-// Output: { a: 5, b: 6, 'c.f': 9, 'c.g.m': 17, 'c.g.n': 3 }
+console.log(
+  "ans",
+  flattenObject({
+    a: null,
+    d: undefined,
+    e: { f: 5 },
+    g: { h: null },
+  })
+);
+// Output:
+// {
+//   a: null,
+//   d: undefined,
+//   "e.f": 5,
+//   "g.h": null
+// }
 
-function flattenObject(obj, parentKey = "", res = {}) {
-  for (let key in obj) {
-    if (obj.hasOwnProperty(key)) {
-      const propName = `${parentKey}${key}`;
-      if (typeof obj[key] === "object") {
-        flattenObject(obj[key], propName + ".", res);
-      } else {
-        res[propName] = obj[key];
-      }
-    }
-  }
-  return res;
-}
-
+//------------------------------------------------------------------------------------------
+// Example usage
 let obj = {
   a: ["4", "2", "3"],
   b: ["4", "3"],
